@@ -1,0 +1,376 @@
+/* =========================
+RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+nav {
+  width: 100%;
+  padding: 20px;
+  background-color: brown;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================
+LEFT SIDE
+========================= */
+
+nav .left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* =========================
+LOGO
+========================= */
+
+nav .logo img {
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+MENU
+========================= */
+
+nav .menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav .menu ul a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* =========================
+RIGHT SIDE
+========================= */
+
+nav .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .phone {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav .btn {
+  padding: 10px 12px;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =========================
+HAMBURGER
+========================= */
+
+nav .menu i {
+  display: none;
+}
+
+/*---------hero-section---------------*/
+
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 150px;
+  background-color: antiquewhite;
+}
+.hero-section .content-section {
+  display: flex;
+  gap: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.hero-section .content-section h1 {
+  margin-bottom: 20px;
+}
+
+.hero-detail .btn {
+  padding: 12px 16px;
+  background-color: transparent;
+  border: 2px solid brown;
+  color: brown;
+  margin-top: 20px;
+}
+.hero-detail .btn:hover {
+  background-color: brown;
+  color: white;
+}
+.content-section {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+/*---about-us---*/
+
+.content-section .about-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.content-section .about-detail h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/*====menu-list=======*/
+.menu-section {
+  width: 100%;
+  background-color: brown;
+  padding: 50px 0 100px;
+}
+.menu-section .menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.menu-section .menu-list .menu-item {
+  width: 30%;
+}
+.menu-section .menu-list .menu-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.menu-section .menu-list .menu-item p {
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.contact-us {
+  background-color: rgb(253, 241, 225);
+  padding-bottom: 100px;
+}
+
+.contact-us .section-content {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.contact-detail div {
+  display: flex;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 10px 20px;
+  color: brown;
+}
+.contact-detail div i {
+  margin: 0 20px;
+}
+.contact-form {
+  width: 50%;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form form input,
+textarea,
+.submit {
+  padding: 20px;
+  width: 100%;
+  height: 30px;
+  margin: 10px;
+}
+.contact-form form textarea {
+  height: 150px;
+}
+
+.contact-form form button {
+  background-color: transparent;
+  border: 2pxsolid brown;
+}
+.contact-form form button:hover {
+  background-color: brown;
+  color: white;
+}
+
+footer {
+  background-color: #5e1f12;
+  color: white;
+  height: 100px;
+  padding: 20px;
+}
+footer .section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .section-content .footer-links ul {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .section-content .footer-links ul a {
+  color: white;
+  text-decoration: none;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  nav {
+    padding: 20px;
+  }
+
+  /* Hide desktop right side */
+
+  nav .right {
+    display: none;
+  }
+
+  /* Mobile menu */
+
+  nav .menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Menu links */
+
+  nav .menu ul li {
+    width: 100%;
+  }
+
+  nav .menu ul a {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    color: black;
+  }
+
+  /* Hamburger icon */
+
+  nav .menu i {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /*-.hero section-*/
+
+  .hero-section .content-section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .hero-section .content-section .hero-image img {
+    width: 100%;
+  }
+  .content-section .about-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu-section .menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-section .menu-list .menu-item {
+    width: 80%;
+  }
+
+  .menu-section .menu-list .menu-item img {
+    width: 100%;
+    height: 300px;
+  }
+
+  footer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  footer p {
+    margin-bottom: 20px;
+  }
+
+  footer .section-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  footer .section-content .footer-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
